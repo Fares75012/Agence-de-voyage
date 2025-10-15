@@ -2,106 +2,74 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Agence de Voyage - Contact</title>
+    <title>Agence de Voyage - Accueil</title>
     <style>
-        /* style de base */
+        /* style du texte pour tout le corps de la page */
         body {
             font-family: Arial, sans-serif;
             background-color: #e0f7fa;
             color: #004d40;
             margin: 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: center; /* Centre le contenu */
         }
 
-        /* classe pour les titres */
+        /* classe pour mettre en valeur certains titres */
         .highlight {
             color: #00796b;
             font-weight: bold;
-            text-align: center;
         }
 
-        /* style des champs du formulaire */
-        input, textarea {
-            display: block;
-            margin-bottom: 15px;
-            padding: 8px;
-            width: 100%;
-            border: 1px solid #004d40;
-            border-radius: 4px;
-            box-sizing: border-box; /* pour que width soit bien respectée */
-        }
-
-        /* bouton stylisé */
-        button {
-            background-color: #00796b;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #004d40;
-        }
-
-        /* image en haut du formulaire */
-        .header-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
-        }
-
-        /* lien centré */
-        .back-link {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 16px;
+        /* style des liens */
+        a {
             color: #00796b;
             text-decoration: none;
+            font-size: 18px;
         }
-        .back-link:hover {
+        a:hover {
             text-decoration: underline;
         }
-    </style>
 
-    <script>
-        // fonction simple pour afficher une alerte quand on soumet le formulaire
-        function validerFormulaire(event) {
-            event.preventDefault(); // empêche l'envoi réel du formulaire (pas de serveur ici)
-            alert("Merci pour votre message ! Nous vous contacterons bientôt.");
-            document.getElementById("contactForm").reset(); // réinitialise le formulaire
+        /* style pour les images de petites tailles */
+        .small-img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px; /* Bords arrondis */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
-    </script>
+
+        /* image principale plus grande */
+        .main-img {
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- image en rapport avec le contact ou le voyage (d'un bureau d'agence) -->
-    <img class="header-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Agence de voyage">
+    <!-- Titre principal de la page -->
+    <h1 class="highlight">Bienvenue chez GlobeTrotter Voyages</h1>
 
-    <!-- titre de la page -->
-    <h1 class="highlight">Contactez GlobeTrotter Voyages</h1>
+    <!-- Sous-titre -->
+    <h2>Découvrez nos destinations de rêve</h2>
 
-    <!-- formulaire simple -->
-    <form id="contactForm" onsubmit="validerFormulaire(event)">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+    <!-- Image principale de présentation (grande image) -->
+    <img class="main-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Plage paradisiaque">
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+    <!-- Texte d'introduction -->
+    <p>Nous vous proposons des séjours inoubliables à travers le monde.</p>
 
-        <label for="message">Votre message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+    <!-- Plusieurs petites images illustrant différentes destinations -->
+    <img class="small-img" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=60" alt="Montagnes enneigées">
+    <img class="small-img" src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=400&q=60" alt="Ville historique">
+    <img class="small-img" src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=60" alt="Désert et chameaux">
 
-        <!-- bouton pour envoyer -->
-        <button type="submit">Envoyer</button>
-    </form>
+    <!-- Saut de ligne -->
+    <br><br>
 
-    <!-- lien pour revenir à l'accueil -->
-    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <!-- Lien vers la page contact -->
+    <a href="contact.html">Contactez-nous pour réserver votre voyage !</a>
 
 </body>
 </html>
