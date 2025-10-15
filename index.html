@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agence de Voyage - Contact</title>
+    <style>
+        /* style de base */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #004d40;
+            margin: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* classe pour les titres */
+        .highlight {
+            color: #00796b;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* style des champs du formulaire */
+        input, textarea {
+            display: block;
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #004d40;
+            border-radius: 4px;
+            box-sizing: border-box; /* pour que width soit bien respectée */
+        }
+
+        /* bouton stylisé */
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+
+        /* image en haut du formulaire */
+        .header-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+        }
+
+        /* lien centré */
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #00796b;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        // fonction simple pour afficher une alerte quand on soumet le formulaire
+        function validerFormulaire(event) {
+            event.preventDefault(); // empêche l'envoi réel du formulaire (pas de serveur ici)
+            alert("Merci pour votre message ! Nous vous contacterons bientôt.");
+            document.getElementById("contactForm").reset(); // réinitialise le formulaire
+        }
+    </script>
+</head>
+<body>
+
+    <!-- image en rapport avec le contact ou le voyage (d'un bureau d'agence) -->
+    <img class="header-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Agence de voyage">
+
+    <!-- titre de la page -->
+    <h1 class="highlight">Contactez GlobeTrotter Voyages</h1>
+
+    <!-- formulaire simple -->
+    <form id="contactForm" onsubmit="validerFormulaire(event)">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Votre message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- bouton pour envoyer -->
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <!-- lien pour revenir à l'accueil -->
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+
+</body>
+</html>
